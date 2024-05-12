@@ -28,6 +28,6 @@ Delete symlinks from the target directory /etc/udev/rules.d
 
 1. .config & ~
 
-cd $HOME/.dotfiles/
+```cd $HOME/.dotfiles/```
  
-stow --adopt --dotfiles -v .
+```stow --adopt --dotfiles -v .```
