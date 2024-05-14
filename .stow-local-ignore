@@ -1,0 +1,7 @@
+\.git
+misc
+LICENSE
+README.md
+root
+home
+^/.*\.org

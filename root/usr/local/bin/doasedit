@@ -1,0 +1,2 @@
+#!/bin/sh
+doas -u "$USER" "$EDITOR" "$1"

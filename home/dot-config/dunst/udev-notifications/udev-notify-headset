@@ -1,0 +1,14 @@
+#!/bin/bash
+export XAUTHORITY=/home/avtr/.Xauthority
+export DISPLAY=:0
+
+case $1 in
+    connected) 
+        dunstify -a "udev-notify-headset" -u normal -I /home/avtr/.config/dunst/dunst-icons/helmet.png -t 3500 -r 9920 "Headset" "has been connected" 
+        ;;
+    disconnected) 
+        dunstify -a "udev-notify-headset" -u low -I /home/avtr/.config/dunst/dunst-icons/bonfire-1.png -t 3500 -r 9920 "Headset" "has been disconnected" 
+        ;;
+esac
+
+

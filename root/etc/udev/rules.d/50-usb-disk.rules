@@ -1,0 +1,3 @@
+ACTION=="bind", SUBSYSTEM=="scsi", ENV{DEVTYPE}=="scsi_device", ENV{DRIVER}=="sd", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/avtr/.Xauthority" RUN+="/home/avtr/.config/dunst/udev-notifications/udev-notify-disk connected"
+
+ACTION=="remove", SUBSYSTEM=="scsi", ENV{DEVTYPE}=="scsi_host", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/avtr/.Xauthority" RUN+="/home/avtr/.config/dunst/udev-notifications/udev-notify-disk disconnected"

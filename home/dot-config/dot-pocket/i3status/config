@@ -1,0 +1,80 @@
+general {
+  output_format = "i3bar"
+  markup = "pango"
+  colors = true
+  color_good = "#50FA7B"
+  color_degraded = "#F1FA8C"
+  color_bad = "#FF5555"
+  interval = 5
+}
+
+
+#order += "run_watch DHCP"
+order += "wireless wlp3s0"
+order += "ethernet enp2s0"
+#order += "disk /"
+order += "battery 0"
+#order += "cpu_temperature 0"
+#order += "load"
+order += "volume master"
+order += "tztime local"
+order += "tztime kyiv"
+
+wireless wlp3s0 {
+        format_up = "<span color='#dbe968'>wlp3s0</span><span color='#44475A'>:</span>[%quality at %essid(%bitrate) ] <span color='#b768a2'>%ip</span>"
+        format_down = "wlp3s0<span color='#44475A'>:</span> down"
+}
+
+ethernet enp2s0 {
+        format_up = "<span color='#dbe968'>enp2s0</span><span color='#44475A'>:</span>%ip (%speed)"
+        format_down = "<span color ='#dbe968'>enp2s0</span><span color='#44475A'>:</span>down"
+}
+
+battery 0 {
+  format = "<span color='#dbe968'>BAT0</span><span color='#44475A'>:</span>%percentage"
+  last_full_capacity = true
+  threshold_type=percentage
+  low_threshold=10
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhcpcd*.pid"
+}
+
+
+tztime local {
+        format = "<span color='#dbe968'>%A<span color='#44475A'>,</span> %Y-%m-%d</span> <span color='#ffffff'>%H:%M:%S</span> <span color='#b768a2'>%Z</span>"
+        hide_if_equals_localtime = true
+}
+
+tztime kyiv {
+        format = "<span color='#dbe968'>Date</span><span color='#44475A'>:</span>%A<span color='#ffffff'>, </span>%Y-%m-%d<span color='#44475A'>|</span><span color='#dbe968'>Time</span><span color='#44475A'>:</span><span color='#ffffff'>%H:%M</span> <span color='#b768a2'>%Z</span>"
+        timezone = "Europe/Kyiv"
+}
+
+load {
+        format = "%5min"
+}
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/temp1_input"
+}
+
+
+disk "/" {
+        format = "<span color='#dbe968'>Free</span> <span color='#b768a2'>/dev/sda3</span> <span color='#dbe968'>Space</span><span color='#44475A'>:</span> %free"
+}
+
+read_file uptime {
+        path = "/proc/uptime"
+}
+
+
+volume master {
+                   format = "<span color='#dbe968'>Volume</span><span color='#44475A'>:</span>%volume"
+                   format_muted = "Volume:<span color='#FF5555'>muted</span>(%volume)"
+                   device = "default"
+                   mixer = "Master"
+                   mixer_idx = 0
+           }

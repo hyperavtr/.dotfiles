@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#Colors
+BGreen='\033[1;32m'
+BRed='\033[1;31m'
+BYellow='\033[1;33m'
+Color_Off='\033[0m'
+UPurple='\033[4;35m'
+
+case $1 in
+    -c | --connect)
+        rfkill unblock bluetooth
+	    sleep 1
+        bluetoothctl connect 74:45:CE:0B:35:57
+        ;;
+    -d | --disconnect)
+        bluetoothctl disconnect
+        rfkill block bluetooth  
+        ;;
+    -h | --help)
+        echo -e "      Usage: headset ${UPurple}[option]"
+        echo -e "Only ${UPurple}one${Color_Off} option per usage is allowed!\n"
+        echo "options:"
+        echo -e "  	${BGreen}-c, --connect${Color_Off}         		Connect headset"
+        echo -e "  	${BRed}-d, --disconnect${Color_Off}      		Disconnect headset"
+	echo -e "	${BYellow}-h, --help${Color_Off}			Show this help"
+        ;;
+    *)
+        echo -e "	You should use ${UPurple}one${Color_Off} of suggested options,"
+        echo -e "	for more details use ${BYellow}-h, --help."
+        ;;
+esac

@@ -1,0 +1,71 @@
+#General
+import = ["~/.config/alacritty/dracula.toml"]
+
+#shell = "<string>" | { program = "<string>", args = ["<string>",] }
+#You can set shell.program to the path of your favorite shell, e.g. /bin/zsh. Entries in shell.args are passed as arguments to the shell.
+#Default:
+        #Linux/BSD/macOS: $SHELL or the user's login shell, if $SHELL is unset
+        #Windows: "powershell"
+#Example:
+        #[shell]
+        #program = "/bin/zsh"
+        #args = ["-l"]
+
+working_directory = "/home/avtr"
+live_config_reload = true #default
+ipc_socket = true #default
+
+#All key-value pairs in the [env] section will be added as environment variables for any process spawned by Alacritty, including its shell. Some entries may override variables set by alacritty itself.
+#Example:
+#[env]
+#WINIT_X11_SCALE_FACTOR = "1.0"
+
+
+[window]
+#dimensions = { column = 0, lines = 0 } #Default
+position = "None" #Default
+padding = { x = 7, y = 7}
+dynamic_padding = false
+decorations = "None" #| "Full" | "Transparent" | "Buttonless"
+opacity = 0.85
+#blur = true | false # (works on macOS/KDE Wayland)
+#startup_mode = "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+title = "Alacritty" #Default
+dynamic_title = true 
+decorations_theme_variant = "None" #| "Dark" | "Light" 
+
+[scrolling]
+history = 10000 #Default
+multiplier = 5
+
+[font]
+normal = { family = "RobotoMono Nerd Font", style = "Medium" } #"InconsolataLGCNerdFontMono", style = "Regular" }
+#bold = { family = "", style = "" }
+#italic = { family = "", style = "" }
+#bold_italic = { family = "", style = "" }
+size = 8.82
+offset = { x = 0, y = 0 }
+#glyph_offset = { x = <integer>, y = <integer> }
+builtin_box_drawing = true #Default
+
+[colors]
+[colors.primary]
+#foreground = "#dbe968"
+background = "#20212b" #"#191B24"
+#dim_foreground = "<string>" #if not set is automatically calculated on the foreground color
+#bright_foreground = "None"
+#cursor = { text = "<string>", cursor = "<string>" }
+#vi_mode_cursor = { text = "<string>", cursor = "<string>" }
+
+[selection]
+save_to_clipboard = true 
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+thickness = 0.20
+
+[mouse]
+hide_when_typing = true
+bindings = [
+{ mouse = "Middle", action = "Paste" }
+]

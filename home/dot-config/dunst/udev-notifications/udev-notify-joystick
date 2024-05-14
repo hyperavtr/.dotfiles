@@ -1,0 +1,8 @@
+#!/bin/bash
+export XAUTHORITY=/home/avtr/.Xauthority
+export DISPLAY=:0
+
+case $1 in
+    connected) dunstify -a "udev-notify-joystick" -u normal -r 3003 -t 2000 "Gamepad" "has been connected" -I /home/avtr/.config/dunst/dunst-icons/woman-knight.png;;
+    disconnected) dunstify -a "udev-notify-joystick" -u low -r 3003 -t 2600 "Gamepad" "has been disconnected" -I /home/avtr/.config/dunst/dunst-icons/bonfire-1.png;;
+esac

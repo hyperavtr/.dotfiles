@@ -1,0 +1,8 @@
+#!/bin/bash
+export XAUTHORITY=/home/avtr/.Xauthority
+export DISPLAY=:0
+
+case $1 in
+    connected) dunstify -a "udev-notify-disk" -u normal -r 3006 "USB flash drive" "has been connected" -I /home/avtr/.config/dunst/dunst-icons/pandora.png;;
+    disconnected) dunstify -a "udev-notify-disk" -u normal -r 3006 "USB flash drive" "has been disconnected" -I /home/avtr/.config/dunst/dunst-icons/bonfire-1.png;;
+esac

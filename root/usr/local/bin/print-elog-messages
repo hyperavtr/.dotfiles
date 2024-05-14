@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# This script is assuming that portage is configured to log in
+# /var/log/portage/elog and that it's configured to split the logged files.
+#
+# If you want specific dates, run the script like so:
+# GET_DATES="20230101 20230102" ./print_elog_messages.sh
+#
+# If you want all files to be printed, run the script like so:
+# GET_ALL="true" ./print_elog_messages.sh
+#
+# If the script filename is different, adjust accordingly!
+
+# Check if running as root and stop if it is.
+current_user=$(whoami)
+[ -z "$current_user" ] && echo "whoami returns an empty string" && exit 1
+[ "$current_user" == "root" ] && echo "Don't run as root, there's no need!" && exit 1
+
+# Set periods to check. These strings are interpreted by the "date" tool.
+declare -a days=("today" "yesterday")
+
+# Change the array to the custom dates if they're declared.
+[ -n "$GET_DATES" ] && declare -a days=("$GET_DATES")
+
+# If we're printing everything, there's no reason to loop multiple times and
+# it would make sense to change the period to "all".
+[ "$GET_ALL" == "true" ] && declare -a days=("all")
+
+# Go through the periods set in the array "days" and format to find filenames
+# containing YYYYmmdd, for example 20221215, since that's the format that's
+# part of the filenames by default. After this, run the command cat with the
+# found filenames as arguments, which adds the file contents
+# to the terminal output. Remove the -n argument from cat if you don't want
+# it to print the line numbers as well.
+for val in ${days[@]}; do
+	echo "          ===== $val ====="
+	find /var/log/portage/elog -name \
+		"*$([ "$GET_ALL" == "true" ] || date --date=$val +%Y%m%d)*" \
+		-type f -print -exec cat -n '{}' \;
+done

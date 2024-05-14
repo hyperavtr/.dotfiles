@@ -1,0 +1,55 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+#ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' #local ip with loopback
+#wget -qO - icanhazip.com   #public ip
+
+# Global properties
+full_text="  "
+align=center
+separator=false
+separator_block_width=1
+markup=pango
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage.sh
+interval=5
+
+[separator]
+
+[memory]
+command=$SCRIPT_DIR/memory.sh
+interval=5
+
+[separator]
+
+[wifi]
+command=$SCRIPT_DIR/wifi.sh
+interval=8
+
+[separator]
+
+[battery]
+command=$SCRIPT_DIR/battery.sh
+interval=5
+color=#d6acff
+
+[separator]
+
+[language]
+command=echo " $(xkblayout-state print %s | awk '{print toupper($0)}')"   #$SCRIPT_DIR/outputkl       
+interval=1
+color=#b8cfde
+
+[separator]
+
+[date]
+instance=eu
+TZ=Europe/Kyiv
+command=echo " $(date '+%A, %Y-%m-%d %H:%M')"
+interval=1
+color=#b8cfde

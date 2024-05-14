@@ -1,0 +1,8 @@
+#!/bin/bash
+export XAUTHORITY=/home/avtr/.Xauthority
+export DISPLAY=:0
+
+case $1 in
+    connected) dunstify -a "udev-notify-mouse" -u normal -r 3005 -t 2000 "Mouse" "has been connected" -I /home/avtr/.config/dunst/dunst-icons/minotaur.png;;
+    disconnected) dunstify -a "udev-notify-mouse" -u normal -r 3005 -t 2000 "Mouse" "has been disconnected" -I /home/avtr/.config/dunst/dunst-icons/bonfire-1.png;;
+esac

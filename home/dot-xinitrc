@@ -1,0 +1,6 @@
+#!/bin/sh
+#xrandr --setprovideroutputsource modesetting NVIDIA-0
+#xrandr --auto
+#xrandr --dpi 165
+xrdb -merge /home/avtr/.Xresources
+exec dbus-launch --exit-with-session i3 

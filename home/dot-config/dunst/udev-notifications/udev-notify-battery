@@ -1,0 +1,10 @@
+#!/bin/bash
+export XAUTHORITY=/home/avtr/.Xauthority
+export DISPLAY=:0
+
+ICON=/home/avtr/.config/dunst/dunst-icons
+
+case $1 in
+    charging) dunstify -a "udev-notify-battery" -u normal -r 3004 -t 2500 "BAT0" "is charging" -I ${ICON}/lightning.png;; 
+    discharging) dunstify -a "udev-notify-battery" -u critical -r 3004 "BAT0" "is discharging" -I ${ICON}/titan.png;;
+esac

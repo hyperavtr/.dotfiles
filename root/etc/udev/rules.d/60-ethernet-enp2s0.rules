@@ -1,0 +1,3 @@
+#ACTION=="add", SUBSYSTEM=="wakeup", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/avtr/.Xauthority" RUN+="/home/avtr/.config/dunst/udev-notifications/ethernet-udev-notify plugged"
+
+#ACTION=="remove", SUBSYSTEM=="wakeup", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/avtr/.Xauthority" RUN+="/home/avtr/.config/dunst/udev-notifications/ethernet-udev-notify unplugged"
