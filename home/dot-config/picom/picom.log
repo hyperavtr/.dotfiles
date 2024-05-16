@@ -1429,3 +1429,4 @@
 [ 05/13/2024 12:17:43.321 win_mark_client ERROR ] Failed to get client window attributes (X error 3 WINDOW request 3 minor 0 serial 1806596)
 [ 05/13/2024 12:17:43.321 win_mark_client ERROR ] Failed to get client window attributes (X error 3 WINDOW request 3 minor 0 serial 1806615)
 [ 05/13/2024 12:17:43.484 session_init FATAL ERROR ] Another composite manager is already running
+[ 05/16/2024 00:20:04.764 x_fetch_region ERROR ] Failed to fetch rectangles (No error)

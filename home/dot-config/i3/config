@@ -267,6 +267,7 @@ gaps outer 6
 assign [class="firefox"] 1
 assign [class="TelegramDesktop"] 5
 assign [class="steam"] 6
+assign [class="Lutris"] 6
 assign [class="qBittorrent"] 7
 assign [class="Tor Browser"] 8
 assign [class="VeraCrypt"] 8
