@@ -193,7 +193,7 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-#brightness control
+#brightness control 
 bindsym XF86MonBrightnessUp exec brightnessctl set 10%+ && sh -c 'source $HOME/.config/i3/i3scripts/changeBrightnessctl.sh' 
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && sh -c 'source $HOME/.config/i3/i3scripts/changeBrightnessctl.sh' 
 
@@ -228,9 +228,9 @@ bindsym Ctrl+Shift+period exec dunstctl context
 # class                 border  bground text    indicator child_border
 client.focused          #6A558C #6A558C #f8f8f2 #846FA7   #846FA7
 client.focused_inactive #6A558C #6A558C #f8f8f2 #434551   #434551
-client.unfocused        #252532 #252532 #bec2c6 #434551   #434551
+client.unfocused        #6A558C #2D2D3C #bec2c6 #434551   #434551
 client.urgent           #ff5555 #ff5555 #f8f8f2 #c04356   #c04356
-client.placeholder      #252532 #252532 #f8f8f2 #434551   #434551
+client.placeholder      #6A558C #2D2D3C #f8f8f2 #434551   #434551
 
 client.background       #F8F8F2
 
@@ -261,7 +261,7 @@ id bar-tray
 for_window [class="^.*"] border pixel 3
 gaps inner 13
 gaps outer 6
-#smart_gaps on
+smart_gaps on
 
 #assigning windows to specific workspaces
 assign [class="firefox"] 1

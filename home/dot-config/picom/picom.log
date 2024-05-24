@@ -1430,3 +1430,10 @@
 [ 05/13/2024 12:17:43.321 win_mark_client ERROR ] Failed to get client window attributes (X error 3 WINDOW request 3 minor 0 serial 1806615)
 [ 05/13/2024 12:17:43.484 session_init FATAL ERROR ] Another composite manager is already running
 [ 05/16/2024 00:20:04.764 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 05/17/2024 16:53:38.518 session_init FATAL ERROR ] Another composite manager is already running
+[ 05/17/2024 16:53:40.574 session_init FATAL ERROR ] Another composite manager is already running
+[ 05/19/2024 10:38:24.728 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 05/21/2024 21:36:56.173 session_init FATAL ERROR ] Another composite manager is already running
+[ 05/22/2024 10:18:47.718 session_init FATAL ERROR ] Another composite manager is already running
+[ 05/22/2024 21:03:57.616 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 05/24/2024 00:07:14.395 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
