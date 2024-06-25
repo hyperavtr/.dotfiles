@@ -63,9 +63,13 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Underline", blinking = "On" }
 thickness = 0.20
+vi_mode_style = { shape ="Block", blinking = "Off"}
 
 [mouse]
 hide_when_typing = true
 bindings = [
 { mouse = "Middle", action = "Paste" }
 ]
+
+
+

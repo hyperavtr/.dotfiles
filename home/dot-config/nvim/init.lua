@@ -187,6 +187,7 @@ require("lazy").setup({
 				["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
 				["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
 				["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
+				["<leader>R"] = { name = "[R]un", _ = "which_key_ignore" },
 			})
 			-- visual mode
 			require("which-key").register({
@@ -607,12 +608,12 @@ require("lazy").setup({
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:
 					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					"rafamadriz/friendly-snippets",
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
 				},
 			},
 			"saadparwaiz1/cmp_luasnip",
@@ -844,13 +845,13 @@ require("lazy").setup({
 
 -- Code runners
 -- C
-vim.keymap.set("n", "<leader>rc", ":!gcc % ; ./a.out <CR>", { desc = "[R]un [C]" })
+vim.keymap.set("n", "<leader>Rc", ":!gcc % ; ./a.out <CR>", { desc = "[R]un [C] code" })
 -- Python
-vim.keymap.set("n", "<leader>rp", ":!python3 % <CR>", { desc = "[R]un [P]ython" })
+vim.keymap.set("n", "<leader>Rp", ":!python3 % <CR>", { desc = "[R]un [P]ython code" })
 -- Bash
-vim.keymap.set("n", "<leader>rb", "!bash % <CR>", { desc = "[R]un [B]ash" })
-
+vim.keymap.set("n", "<leader>Rb", "!bash % <CR>", { desc = "[R]un [B]ash code" })
 -- HTML
-vim.keymap.set("n", "<leader>rh", ":!xdg-open % <CR>", { desc = "[R]un [H]tml" })
+vim.keymap.set("n", "<leader>Rh", ":!xdg-open % <CR>", { desc = "[R]un [H]tml code" })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
