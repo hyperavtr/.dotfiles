@@ -259,9 +259,9 @@ id bar-tray
 }
 
 for_window [class="^.*"] border pixel 3
-gaps inner 13
-gaps outer 6
-smart_gaps on
+#gaps inner 13
+#gaps outer 6
+#smart_gaps on
 
 #assigning windows to specific workspaces
 assign [class="firefox"] 1

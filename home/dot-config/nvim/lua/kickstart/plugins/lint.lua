@@ -7,8 +7,13 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = { "markdownlint" },
+				html = { "htmlhint" },
+				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
+				c = { "cpplint" },
+				bash = { "shellcheck" },
+				python = { "pylint" },
 			}
-
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,
 			-- instead set linters_by_ft like this:
 			-- lint.linters_by_ft = lint.linters_by_ft or {}

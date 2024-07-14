@@ -59,6 +59,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 20
 
+-- Tab<->Spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.expandtabs = true
+
 -- NOTE:[[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -527,12 +532,13 @@ require("lazy").setup({
 			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
-				"bashls", --Used to format Bash code
-				"basedpyright", --Used to format Python code
-				"clangd", --Used to format C code
-				"html", --Used to format HTML markdown
-				"cssls", --Used to format CSS code
+				"stylua", -- Used to LSP Lua
+				"bashls", --Used to LSP Bash
+				"basedpyright", --Used to LSP Python
+				"clangd", --Used to LSP C
+				"html", --Used to LSP HTML markdown
+				"cssls", --Used to LSP CSS
+				"eslint", --Used to JS(TS)
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -583,7 +589,12 @@ require("lazy").setup({
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				--html = { "prettierd" },
+				--css = { "prettierd" },
+				bash = { "beautysh" },
+				python = { "autoflake" },
 			},
 		},
 	},
@@ -694,6 +705,7 @@ require("lazy").setup({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "path" },
+					{ name = "buffer" },
 				},
 			})
 		end,
@@ -765,9 +777,27 @@ require("lazy").setup({
 	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
+		dependencies = {
+			"windwp/nvim-ts-autotag",
+			-- Setup autotag with default options.
+			opts = {},
+		},
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "bash", "c", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+			ensure_installed = {
+				"bash",
+				"c",
+				"html",
+				"lua",
+				"luadoc",
+				"markdown",
+				"vim",
+				"vimdoc",
+				"css",
+				"python",
+				"javascript",
+				"typescript",
+			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {
@@ -805,9 +835,9 @@ require("lazy").setup({
 	--  Here are some example plugins that I've included in the Kickstart repository.
 	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
 	--
-	-- require("kickstart.plugins.debug"),
+	--require("kickstart.plugins.debug"),
 	require("kickstart.plugins.indent_line"),
-	-- require 'kickstart.plugins.lint',
+	require("kickstart.plugins.lint"),
 	require("kickstart.plugins.autopairs"),
 
 	require("kickstart.plugins.neo-tree"),
@@ -852,6 +882,8 @@ vim.keymap.set("n", "<leader>Rp", ":!python3 % <CR>", { desc = "[R]un [P]ython c
 vim.keymap.set("n", "<leader>Rb", "!bash % <CR>", { desc = "[R]un [B]ash code" })
 -- HTML
 vim.keymap.set("n", "<leader>Rh", ":!xdg-open % <CR>", { desc = "[R]un [H]tml code" })
+--JavaScript
+vim.keymap.set("n", "<leader>Rj", ":!node % <CR>", { desc = "[R]un [J]avaScript code" })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
