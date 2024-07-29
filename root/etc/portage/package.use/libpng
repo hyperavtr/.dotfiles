@@ -1,0 +1,4 @@
+# required by www-client/firefox-115.10.0::gentoo[system-png]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libpng-1.6.43 apng

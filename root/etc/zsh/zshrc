@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+# Completion
+autoload -U compinit
+compinit
+
+# Correction
+setopt correctall
+
+# Prompt
+autoload -U promptinit
+promptinit
+prompt gentoo
+
+# History
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
+# Autocd
+setopt autocd
+# ?
+setopt extendedglob 
+
+source /home/avtr/.zsh-plugins/path/to/fsh/fast-syntax-highlighting.plugin.zsh

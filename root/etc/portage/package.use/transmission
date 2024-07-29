@@ -1,0 +1,22 @@
+>=net-p2p/transmission-4.0.4 gtk appindicator
+# required by dev-libs/libayatana-appindicator-0.5.92::gentoo
+# required by net-p2p/transmission-4.0.4::gentoo[gtk,appindicator]
+# required by net-p2p/transmission (argument)
+>=dev-libs/libdbusmenu-16.04.0-r2 gtk3
+# required by dev-libs/libdbusmenu-16.04.0-r2::gentoo[gtk3]
+# required by dev-libs/libayatana-appindicator-0.5.92::gentoo
+# required by net-p2p/transmission-4.0.4::gentoo[gtk,appindicator]
+# required by net-p2p/transmission (argument)
+>=x11-libs/gtk+-3.24.39 abi_x86_32
+# required by x11-libs/gtk+-3.24.39::gentoo
+# required by dev-libs/libayatana-indicator-0.9.3::gentoo
+# required by dev-libs/libayatana-appindicator-0.5.92::gentoo
+# required by net-p2p/transmission-4.0.4::gentoo[gtk,appindicator]
+# required by net-p2p/transmission (argument)
+>=media-libs/libepoxy-1.5.10-r2 abi_x86_32
+# required by x11-libs/gtk+-3.24.39::gentoo[wayland]
+# required by dev-libs/libayatana-indicator-0.9.3::gentoo
+# required by dev-libs/libayatana-appindicator-0.5.92::gentoo
+# required by net-p2p/transmission-4.0.4::gentoo[gtk,appindicator]
+# required by net-p2p/transmission (argument)
+>=x11-libs/libxkbcommon-1.6.0 abi_x86_32

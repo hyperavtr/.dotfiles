@@ -1,0 +1,6 @@
+# required by gnome-base/gnome-keyring-42.1-r2::gentoo
+# required by virtual/secret-service-0::gentoo
+# required by app-crypt/libsecret-0.21.1::gentoo
+# required by app-editors/vscodium-1.86.2.24053::gentoo
+# required by vscodium (argument)
+>=app-crypt/gcr-3.41.1-r2:0 gtk

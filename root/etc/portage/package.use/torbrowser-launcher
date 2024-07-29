@@ -1,0 +1,15 @@
+# required by www-client/torbrowser-launcher-0.3.7::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+>=x11-libs/gtk+-3.24.39 wayland
+# required by www-client/torbrowser-launcher-0.3.7::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+>=app-crypt/gpgme-1.23.2 python
+# required by x11-libs/gtk+-3.24.39::gentoo[wayland]
+# required by www-client/torbrowser-launcher-0.3.7::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+>=media-libs/mesa-23.3.6 wayland
+# required by media-libs/mesa-23.3.6::gentoo[wayland]
+# required by x11-libs/gtk+-3.24.39::gentoo[wayland]
+# required by www-client/torbrowser-launcher-0.3.7::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+>=dev-libs/wayland-1.22.0 abi_x86_32

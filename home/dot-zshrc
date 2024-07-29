@@ -13,3 +13,4 @@ alias se="sudoedit"
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
+alias webf='cd /home/avtr/Documents/code/web/'

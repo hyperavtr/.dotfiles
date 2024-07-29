@@ -1,0 +1,2 @@
+# required by kde-frameworks/kimageformats[avif,heif,jpegxl] (argument)
+>=kde-frameworks/kimageformats-5.115.0 jpegxl avif heif

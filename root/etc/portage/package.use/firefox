@@ -1,0 +1,114 @@
+www-client/firefox hwaccel hardened
+# required by www-client/firefox-115.8.0::gentoo[system-libvpx]
+# required by www-client/firefox (argument)
+>=media-libs/libvpx-1.13.1-r1 postproc
+# required by media-libs/mesa-23.3.6::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/libXxf86vm-1.1.5 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=media-libs/libglvnd-1.7.0 abi_x86_32
+# required by sys-devel/llvm-17.0.6::gentoo
+# required by sys-devel/lld-17.0.6::gentoo
+# required by sys-devel/lld-toolchain-symlinks-17::gentoo
+>=sys-libs/zlib-1.3-r4 abi_x86_32
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=media-libs/mesa-23.3.6 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/libdrm-2.4.120 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/libxshmfence-1.3.2 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/libxcb-1.16-r1 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/xcb-util-keysyms-0.4.1 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo[zstd]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=app-arch/zstd-1.5.5-r1 abi_x86_32
+# required by media-libs/mesa-23.3.6::gentoo[llvm,-opencl]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=sys-devel/llvm-17.0.6 abi_x86_32
+# required by sys-devel/llvm-17.0.6::gentoo[libffi]
+# required by sys-devel/lld-17.0.6::gentoo
+# required by sys-devel/lld-toolchain-symlinks-17::gentoo
+>=dev-libs/libffi-3.4.4-r4 abi_x86_32
+# required by sys-devel/llvm-17.0.6::gentoo[ncurses]
+# required by sys-devel/lld-17.0.6::gentoo
+# required by sys-devel/lld-toolchain-symlinks-17::gentoo
+>=sys-libs/ncurses-6.4_p20230401 abi_x86_32
+# required by sys-devel/llvm-17.0.6::gentoo[xml]
+# required by sys-devel/lld-17.0.6::gentoo
+# required by sys-devel/lld-toolchain-symlinks-17::gentoo
+>=dev-libs/libxml2-2.12.5 abi_x86_32
+# required by dev-libs/libxml2-2.12.5::gentoo[icu]
+# required by sys-devel/llvm-17.0.6::gentoo[xml]
+# required by sys-devel/lld-17.0.6::gentoo
+# required by sys-devel/lld-toolchain-symlinks-17::gentoo
+>=dev-libs/icu-74.2 abi_x86_32
+# required by x11-libs/libdrm-2.4.120::gentoo[video_cards_intel]
+# required by media-libs/mesa-23.3.6::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=x11-libs/libpciaccess-0.18 abi_x86_32
+# required by dev-libs/libusb-1.0.26::gentoo[udev]
+# required by virtual/libusb-1-r2::gentoo
+# required by media-video/pipewire-1.0.3::gentoo
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+# required by www-client/firefox (argument)
+>=virtual/libudev-251-r2 abi_x86_32
+# required by www-client/firefox-115.8.0::gentoo
+# required by www-client/firefox (argument)
+>=virtual/opengl-7.0-r2 abi_x86_32
+# required by media-libs/freeglut-3.4.0::gentoo
+# required by media-libs/libwebp-1.3.2::gentoo[opengl]
+# required by www-client/firefox-115.8.0::gentoo[system-webp]
+# required by www-client/firefox (argument)
+>=virtual/glu-9.0-r2 abi_x86_32
+# required by virtual/glu-9.0-r2::gentoo
+# required by media-libs/freeglut-3.4.0::gentoo
+# required by media-libs/libwebp-1.3.2::gentoo[opengl]
+# required by www-client/firefox-115.8.0::gentoo[system-webp]
+# required by www-client/firefox (argument)
+>=media-libs/glu-9.0.3 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+# required by www-client/firefox (argument)
+>=media-libs/libsndfile-1.2.2-r2 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo[asyncns]
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+# required by www-client/firefox (argument)
+>=net-libs/libasyncns-0.8-r4 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+# required by www-client/firefox (argument)
+>=media-libs/opus-1.4 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+# required by www-client/firefox (argument)
+>=media-sound/lame-3.100-r3 abi_x86_32

@@ -1,0 +1,8 @@
+# required by media-libs/tiff-4.6.0::gentoo[lzma]
+# required by media-gfx/imagemagick-7.1.1.25::gentoo[tiff]
+# required by virtual/imagemagick-tools-0-r1::gentoo
+# required by dev-python/matplotlib-3.8.3::gentoo
+# required by games-util/mangohud-0.7.1::guru[python_single_target_python3_11]
+# required by @selected
+# required by @world (argument)
+>=app-arch/xz-utils-5.4.2 abi_x86_32

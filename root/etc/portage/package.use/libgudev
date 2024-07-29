@@ -1,0 +1,7 @@
+# required by media-libs/gst-plugins-bad-1.22.11-r1::gentoo[vaapi,udev]
+# required by media-plugins/gst-plugins-faad-1.22.11::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[aac]
+# required by app-emulation/wine-vanilla-9.0::gentoo[gstreamer]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgudev-238-r1 abi_x86_32

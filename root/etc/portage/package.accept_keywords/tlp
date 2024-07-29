@@ -1,0 +1,5 @@
+=sys-power/tlp-1.6.1 ~amd64
+# required by media-libs/nvidia-vaapi-driver (argument)
+=media-libs/nvidia-vaapi-driver-0.0.11 ~amd64
+# required by app-shells/ohmyzsh (argument)
+=app-shells/ohmyzsh-9999 **

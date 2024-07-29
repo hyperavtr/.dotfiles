@@ -1,0 +1,5 @@
+DISPLAY=:0
+ICONS=/home/avtr/.icons/notifications
+#Mins Hours  DOM    Months DOW
+ 00   21     20     */3     *  eclean-dist -d && dunstify -u critical "Cronie" "Source files have been cleaned up"
+                    @monthly    rm -rf /home/avtr/.local/share/Trash/* && dunstify -u critical "Cronie" "Trash has been cleared"

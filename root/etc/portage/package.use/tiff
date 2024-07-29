@@ -1,0 +1,9 @@
+# required by x11-libs/gdk-pixbuf-2.42.10-r1::gentoo
+# required by dev-util/gtk-update-icon-cache-3.24.40::gentoo
+# required by x11-libs/gtk+-3.24.41::gentoo
+# required by app-text/gspell-1.12.2::gentoo
+# required by x11-libs/wxGTK-3.2.2.1-r4::gentoo
+# required by app-crypt/veracrypt-1.26.7::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/tiff-4.6.0-r1 abi_x86_32

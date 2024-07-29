@@ -1,0 +1,5 @@
+# required by virtual/rust-1.77.1::gentoo
+# required by x11-terms/alacritty-0.13.2::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-lang/rust-1.77.1 abi_x86_32
