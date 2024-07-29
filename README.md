@@ -30,7 +30,7 @@ sudo stow -vt / .
 cd $HOME/.dotfiles/home
 ```
 ---
->Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `stow --adopt -nvt ~ .`
+>Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `stow --adopt --dotfiles -nvt ~ .`
 
 ```bash
 stow --adopt --dotfiles -vt ~ .
