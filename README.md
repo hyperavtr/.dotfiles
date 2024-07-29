@@ -1,7 +1,7 @@
 # i3wm/X11 avtr's .dotfiles 
 ## Depencencies
 ```bash
-sudo emerge x11-wm/i3 x11-terms/alacritty x11-misc/xclip x11-misc/xdg-user-dirs x11-misc/picom x11-misc/i3blocks x11-misc/dunst net-wireless/iw net-wireless/wpa_supplicant app-misc/brightnessctl media-fonts/fontawesome media-fonts/noto-emoji media-gfx/feh media-gfx/maim x11-misc/xdotool x11-misc/xkblayout-state app-admin/stow app-misc/fastfetch x11-misc/rofi app-editors/neovim games-util/mangohud sys-apps/ripgrep sys-apps/fd app-admin/sysklogd app-admin/sysstat
+dev-vcs/git, app-admin/stow
 ```
  
 ## Installation
