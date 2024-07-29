@@ -17,10 +17,22 @@ cd $HOME/.dotfiles/root
  ```bash
 sudo stow --adopt -vt / .
 ``` 
+```bash
+su - root
+```
+```bash
+chown root:root /etc/sudoers
+```
 >Or safe for cloned stow directory(pure). Simulation is recommended `sudo stow -nvt / .`. 
 
 ```bash
 sudo stow -vt / .
+```
+```bash
+su - root
+```
+```bash
+chown root:root /etc/sudoers
 ```
 ---
 
