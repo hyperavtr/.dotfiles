@@ -8,6 +8,12 @@ dev-vcs/git, app-admin/stow
 
 --- 
 ## Installation
+
+### Clone
+```bash
+git clone https://github.com/hyperavtr/.dotfiles.git
+```
+---
  #### Specific folder
  >`Example for making symlinks only for i3 configuration.` If you want to make symlinks from specific folder just cd there and use commands below.
  ```bash
