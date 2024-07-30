@@ -1,7 +1,7 @@
 # Gentoo/X11/i3 avtr's .dotfiles
 ## Depencencies
 ```bash
-dev-vcs/git, app-admin/stow
+sudo emerge dev-vcs/git, app-admin/stow
 ```
 ---
 ![alt text](https://github.com/hyperavtr/.dotfiles/blob/main/syspic.png?raw=true)
@@ -53,10 +53,10 @@ sudo stow -vt / .
 su - root
 ```
 ```bash
-chown root:root /etc/sudoers
+chown root:root /etc/sudoers && exit
 ```
 ```bash
-sudo usermod -a -G root,tty,wheel,cron,audio,video,usb,input,users,portage,plugdev,gamemode,pipewire $USER
+usermod -a -G root,tty,wheel,cron,audio,video,usb,input,users,portage,plugdev,gamemode,pipewire $USER
 ```
 >Check just in case.
 ```bash
