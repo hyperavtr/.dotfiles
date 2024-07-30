@@ -1,11 +1,30 @@
-# i3wm/X11 avtr's .dotfiles 
+# Gentoo/X11/i3 avtr's .dotfiles
 ## Depencencies
 ```bash
-sudo emerge x11-wm/i3 x11-terms/alacritty x11-misc/xclip x11-misc/xdg-user-dirs x11-misc/picom x11-misc/i3blocks x11-misc/dunst net-wireless/iw net-wireless/wpa_supplicant app-misc/brightnessctl media-fonts/fontawesome media-fonts/noto-emoji media-gfx/feh media-gfx/maim x11-misc/xdotool x11-misc/xkblayout-state app-admin/stow app-misc/fastfetch x11-misc/rofi app-editors/neovim games-util/mangohud sys-apps/ripgrep sys-apps/fd app-admin/sysklogd app-admin/sysstat
+dev-vcs/git, app-admin/stow
 ```
- 
+---
+![alt text](https://github.com/hyperavtr/.dotfiles/blob/main/syspic.png?raw=true)
+
+--- 
 ## Installation
- 
+ #### Specific folder
+ >`Example for making symlinks only for i3 configuration.` If you want to make symlinks from specific folder just cd there and use commands below.
+ ```bash
+ cd $HOME/.dotfiles/home/dot-config/i3
+ ```
+ ---
+ >Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `sudo stow --adopt -nvt / .`
+
+ ```bash
+sudo stow --adopt -vt / .
+``` 
+>Or safe for cloned stow directory(pure). Simulation is recommended `sudo stow -nvt / .`. 
+
+```bash
+sudo stow -vt / .
+```
+ ---
 #### root
 
 ```bash
@@ -22,6 +41,21 @@ sudo stow --adopt -vt / .
 ```bash
 sudo stow -vt / .
 ```
+>After you're done with the symlinks
+
+```bash
+su - root
+```
+```bash
+chown root:root /etc/sudoers
+```
+```bash
+sudo usermod -a -G root,tty,wheel,cron,audio,video,usb,input,users,portage,plugdev,gamemode,pipewire $USER
+```
+>Check just in case.
+```bash
+$USER groups
+```
 ---
 
 #### home
@@ -30,7 +64,7 @@ sudo stow -vt / .
 cd $HOME/.dotfiles/home
 ```
 ---
->Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `stow --adopt -nvt ~ .`
+>Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `stow --adopt --dotfiles -nvt ~ .`
 
 ```bash
 stow --adopt --dotfiles -vt ~ .
@@ -43,6 +77,19 @@ stow --dotfiles -vt ~ .
 ---
 
 ## Uninstallation
+#### Specific folder
+>`Example for removing symlinks only for i3 configuration.`
+
+ ```bash
+ cd $HOME/.dotfiles/home/dot-config/i3
+ ```
+---
+>Simulation is recommended `sudo stow -nDvt / .`.
+
+```bash
+sudo stow -Dvt / .
+```
+---
 
 #### root
 
