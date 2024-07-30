@@ -11,7 +11,7 @@ sudo emerge dev-vcs/git, app-admin/stow
 
 ### Clone
 ```bash
-git clone https://github.com/hyperavtr/.dotfiles.git
+git clone https://github.com/hyperavtr/.dotfiles.git && cd .dotfiles
 ```
 ---
  #### Specific folder
