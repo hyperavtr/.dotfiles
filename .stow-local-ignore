@@ -5,3 +5,7 @@ README.md
 root
 home
 ^/.*\.org
+syspic.png
+crontab_-e.txt
+fstab.txt
+\.cantbesymlinked

@@ -1583,3 +1583,8 @@
 [ 07/27/2024 00:48:22.797 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
 [ 07/27/2024 00:48:22.798 handle_queued_x_events FATAL ERROR ] X11 server connection broke (error 1)
 [ 07/29/2024 02:06:12.809 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 07/29/2024 08:45:10.756 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 07/29/2024 08:45:10.756 handle_queued_x_events FATAL ERROR ] X11 server connection broke (error 1)
+[ 07/30/2024 02:23:29.044 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 07/30/2024 10:36:32.215 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
+[ 07/30/2024 11:01:55.124 x_fetch_region ERROR ] Failed to fetch rectangles (No error)
