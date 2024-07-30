@@ -4,7 +4,10 @@
 sudo emerge dev-vcs/git, app-admin/stow
 ```
 ---
-![alt text](https://github.com/hyperavtr/.dotfiles/blob/main/syspic.png?raw=true)
+
+<p align="center">
+<img src="syspic.png" alt="fastfetch output" width="60%" align="center"/>
+</p>
 
 --- 
 ## Installation
