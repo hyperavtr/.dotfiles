@@ -1,13 +1,22 @@
 # Gentoo/X11/i3 avtr's .dotfiles
 ## Depencencies
 ```bash
-dev-vcs/git, app-admin/stow
+sudo emerge dev-vcs/git, app-admin/stow
 ```
 ---
-![alt text](https://github.com/hyperavtr/.dotfiles/blob/main/syspic.png?raw=true)
+
+<p align="center">
+<img src="syspic.png" alt="fastfetch output" width="60%" align="center"/>
+</p>
 
 --- 
 ## Installation
+
+### Clone
+```bash
+git clone https://github.com/hyperavtr/.dotfiles.git && cd .dotfiles
+```
+---
  #### Specific folder
  >`Example for making symlinks only for i3 configuration.` If you want to make symlinks from specific folder just cd there and use commands below.
  ```bash
@@ -30,6 +39,10 @@ sudo stow -vt / .
 ```bash
 cd $HOME/.dotfiles/root
 ```
+
+```bash
+./transfer-icons.sh && ./transfer-etc.sh
+```
 ---
  >Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `sudo stow --adopt -nvt / .`
 
@@ -40,21 +53,6 @@ sudo stow --adopt -vt / .
 
 ```bash
 sudo stow -vt / .
-```
->After you're done with the symlinks
-
-```bash
-su - root
-```
-```bash
-chown root:root /etc/sudoers
-```
-```bash
-sudo usermod -a -G root,tty,wheel,cron,audio,video,usb,input,users,portage,plugdev,gamemode,pipewire $USER
-```
->Check just in case.
-```bash
-$USER groups
 ```
 ---
 
