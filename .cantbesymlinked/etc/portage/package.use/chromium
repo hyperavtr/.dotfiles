@@ -1,0 +1,7 @@
+www-client/chromium -hangouts -qt6 -screencast -system-toolchain
+# required by www-client/chromium-127.0.6533.88::gentoo[system-png]
+# required by chromium (argument)
+>=media-libs/libpng-1.6.43 -apng
+# required by www-client/chromium-127.0.6533.88::gentoo
+# required by chromium (argument)
+>=net-libs/nodejs-22.3.0 inspector

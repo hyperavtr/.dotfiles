@@ -48,6 +48,7 @@ sys-apps/pciutils
 sys-apps/ripgrep
 sys-apps/xdg-desktop-portal-gtk
 sys-boot/grub
+sys-boot/ventoy-bin
 sys-firmware/intel-microcode
 sys-fs/btrfs-progs
 sys-kernel/gentoo-kernel
