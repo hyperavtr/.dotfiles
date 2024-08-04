@@ -39,6 +39,10 @@ sudo stow -vt / .
 ```bash
 cd $HOME/.dotfiles/root
 ```
+
+```bash
+./transfer-icons.sh && ./transfer-etc.sh
+```
 ---
  >Warning! This behaviour is specifically intended to alter the contents of your stow directory(mix, if files do exist in the symlinks destinations - **stow directory** would be overwritten with this files). If you do not want that, this option is not for you `--adopt`. Simulate at first if you want `sudo stow --adopt -nvt / .`
 
@@ -49,21 +53,6 @@ sudo stow --adopt -vt / .
 
 ```bash
 sudo stow -vt / .
-```
->After you're done with the symlinks
-
-```bash
-su - root
-```
-```bash
-chown root:root /etc/sudoers && exit
-```
-```bash
-usermod -a -G root,tty,wheel,cron,audio,video,usb,input,users,portage,plugdev,gamemode,pipewire $USER
-```
->Check just in case.
-```bash
-$USER groups
 ```
 ---
 
